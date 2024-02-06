@@ -11,12 +11,11 @@ jobs:
         uses: ./
         with:
           cloud: true
-          token: ${{ secrets.K6_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
           flags: --vus 1 --duration 10s
       - name: Run load test using actions tarball
         uses: grafana/k6-action@HEAD
         with:
           cloud: true
-          token: ${{ secrets.K6_TOKEN }}
+          token: ${{ secrets.K6_CLOUD_API_TOKEN }}
           flags: --vus 1 --duration 10s
-
